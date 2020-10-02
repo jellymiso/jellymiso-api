@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug
+/EmployeeAPI.sln
+/EmployeeAPI.njsproj.user
+/EmployeeAPI.njsproj
+/bin
+/.vs/EmployeeAPI/v16

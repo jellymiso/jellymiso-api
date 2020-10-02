@@ -103,8 +103,7 @@ function getEmployeeData(response, request) {
 			}
 		}
 	}
-
-	response.setHeader('Content-Type', 'application/json');
+	response.writeHead((reqEmployeeData.length ? 200 : 404), { "Content-Type": 'application/json' });
 	response.end(JSON.stringify(reqEmployeeData));
 	//
 }

@@ -11,7 +11,7 @@ function route(pathname, handle, response, request) {
 		requestPathPart = "/api/employees/";
 		request.ReqEmployee = pathname.replace(requestPathPart, "")
 	}
-	else {
+	else if (requestPathPart.includes("/api/employees/")){
 		requestPathPart = "/api/employees";
 	}
 

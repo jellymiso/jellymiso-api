@@ -3,12 +3,17 @@
 //===============
 var server = require("./server");
 var router = require("./router");
-var requestHandler = require("./requestHandlers");
+var requestApp = require("./modules/requestApp");
+var requestMail = require("./modules/requestMail");
+var requestMisc = require("./modules/requestMisc");
 //
 var handle = {};
 
-handle["/"] = requestHandler.appStart;
-handle["/api/employees"] = requestHandler.getEmployeeList;
-handle["/api/employees/"] = requestHandler.getEmployeeData;
+handle["/"] = requestApp.appStart;
+// handle["/css"] = requestApp.appStaticFiles;
+// handle["/js"] = requestApp.appStaticFiles;
+// handle["/images"] = requestApp.appStaticFiles;
+handle["/mail"] = requestMail.apiMail;
+handle["/misc"] = requestMisc.apiMisc;
 //
 server.startServer(router.route, handle);
